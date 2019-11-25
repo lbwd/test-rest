@@ -13,4 +13,4 @@ var app = http.createServer(function(req, res) {
       res.end();
     });
 });
-app.listen(3000);
+app.listen(process.env.PORT || 5000);
