@@ -10,11 +10,11 @@ var app = http.createServer(function(req, res) {
     .on('end', function() {
       body = Buffer.concat(body).toString();
       if (body) {
-        console.log(
+        let curl =
           "curl --user \"***CREDENTIALS***\" -X POST 'http://127.0.0.1:8080/mgn-services/addevent' -H 'Cache-Control: no-cache' -H 'Content-Type: application/json' -d \"" +
-            body +
-            '"'.trim().replace(/(\r\n|\n|\r)/gm, '')
-        );
+          body +
+          '"';
+        console.log(curl.trim().replace(/(\r\n|\n|\r)/gm, ''));
       }
       res.end();
     });
