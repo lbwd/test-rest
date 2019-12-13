@@ -12,8 +12,8 @@ var app = http.createServer(function(req, res) {
       if (body) {
         console.log(
           "curl --user \"***CREDENTIALS***\" -X POST 'http://127.0.0.1:8080/mgn-services/addevent' -H 'Cache-Control: no-cache' -H 'Content-Type: application/json' -d \"" +
-            body.trim() +
-            '"'
+            body +
+            '"'.trim()
         );
       }
       res.end();
